@@ -13,7 +13,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col bg-base-100">
+    <div className="min-h-screen flex flex-col gap-4 bg-base-100">
       <Header />
       <section className="hero bg-primary text-white py-10 max-w-xl mx-auto rounded-md shadow-md">
         <div className="container mx-auto text-center">
