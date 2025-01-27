@@ -15,6 +15,14 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col bg-base-100">
       <Header />
+      <section className="hero bg-primary text-white py-10 max-w-xl mx-auto rounded-md shadow-md">
+        <div className="container mx-auto text-center">
+          <h2 className="text-3xl font-bold">Is it Worthy?</h2>
+          <p className="mt-4 text-lg">
+            Calculate if your decision is worthy or not.
+          </p>
+        </div>
+      </section>
       <main className="flex-1 flex items-center justify-center w-full px-4">
         <div className="w-full max-w-xl">
           <CostCalculator />

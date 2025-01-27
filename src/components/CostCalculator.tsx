@@ -46,10 +46,10 @@ const CostCalculator = () => {
   };
 
   return (
-    <div className="card w-full bg-base-200 shadow-xl">
+    <div className="card w-full bg-base-200 shadow-xl border-2 border-primary/5 rounded-md">
       <div className="card-body">
-        <h1 className="card-title justify-center text-2xl font-bold mb-6 text-base-content">
-          Cost Calculator
+        <h1 className="card-title justify-center text-2xl font-bold mb-6 text-base-content border-b-2 border-primary pb-2">
+          Calculator
         </h1>
 
         <div className="form-control w-full">
@@ -62,7 +62,7 @@ const CostCalculator = () => {
             value={timeSpent}
             onChange={(e) => setTimeSpent(e.target.value)}
             className={`input input-bordered tabular-nums w-full ${
-              errors.timeSpent ? "input-error text-error" : ""
+              errors.timeSpent ? "input-error" : ""
             } bg-base-100 text-base-content`}
             style={{ appearance: "none", MozAppearance: "textfield" }}
           />
@@ -83,9 +83,8 @@ const CostCalculator = () => {
             value={frequency}
             onChange={(e) => setFrequency(e.target.value)}
             className={`input input-bordered tabular-nums w-full ${
-              errors.frequency ? "input-error text-error" : ""
+              errors.frequency ? "input-error" : ""
             } bg-base-100 text-base-content`}
-            // Remove up and down controls
             style={{ appearance: "none", MozAppearance: "textfield" }}
           />
           {errors.frequency && (
@@ -107,7 +106,6 @@ const CostCalculator = () => {
             className={`input input-bordered tabular-nums w-full ${
               errors.hourlyCost ? "input-error" : ""
             } bg-base-100 text-base-content`}
-            // Remove up and down controls
             style={{ appearance: "none", MozAppearance: "textfield" }}
           />
           {errors.hourlyCost && (
@@ -118,14 +116,14 @@ const CostCalculator = () => {
         </div>
 
         {totalCost !== null && (
-          <div className="mt-4 text-center p-6 border-2 border-primary rounded-lg shadow-lg bg-base-200">
-            <h2 className="text-lg font-semibold text-base-content">
+          <div className="mt-4 text-center p-6 border-2 border-primary rounded-md shadow-md bg-base-200">
+            <h2 className="font-semibold text-base-content text-sm">
               Monthly Cost:
             </h2>
             <p className="text-3xl font-bold text-primary tabular-nums">
               ${totalCost.toFixed(2)}
             </p>
-            <h2 className="text-lg font-semibold text-base-content mt-4">
+            <h2 className="text-sm font-semibold text-base-content mt-4">
               Yearly Cost:
             </h2>
             <p className="text-3xl font-bold text-primary tabular-nums">
