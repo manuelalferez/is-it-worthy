@@ -1,6 +1,6 @@
-# Is it Worthy? App
+# Is it Worthy?
 
-The "Is it Worthy?" app is a simple cost calculator designed to help users determine whether it is more cost-effective to perform a task themselves or delegate it to someone else.
+Calculate if your decision is worthy or not.
 
 ## Features
 
