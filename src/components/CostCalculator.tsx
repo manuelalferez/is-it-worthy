@@ -32,26 +32,6 @@ const CostCalculator = () => {
     }
   }, [timeSpent, frequency, hourlyCost, delegateCost]);
 
-  const validateFields = () => {
-    const newErrors: { [key: string]: string } = {};
-
-    if (!timeSpent || Number(timeSpent) <= 0) {
-      newErrors.timeSpent = "Please enter a valid time";
-    }
-    if (!frequency || Number(frequency) <= 0) {
-      newErrors.frequency = "Please enter a valid frequency";
-    }
-    if (!hourlyCost || Number(hourlyCost) <= 0) {
-      newErrors.hourlyCost = "Please enter a valid cost";
-    }
-    if (!delegateCost || Number(delegateCost) <= 0) {
-      newErrors.delegateCost = "Please enter a valid delegation cost";
-    }
-
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
-
   return (
     <div className="card w-full bg-base-200 shadow-xl border-2 border-primary/5 rounded-md">
       <div className="card-body">
